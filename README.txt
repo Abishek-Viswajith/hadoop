@@ -20,6 +20,9 @@ export YARN_HOME=$HADOOP_HOME
 
 source ~/.bashrc
 
+nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
 nano $HADOOP_HOME/etc/hadoop/core-site.xml
 
 <configuration>

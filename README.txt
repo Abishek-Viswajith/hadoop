@@ -73,6 +73,16 @@ nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 hdfs namenode -format
 
+sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl enable ssh
+sudo systemctl status ssh
+ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+ssh localhost
+
 start-dfs.sh
 
 
